@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StreamPick - Movie Recommender</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">StreamPick</div>
+    <div class="search">
+      <input type="text" id="movie-input" placeholder="Search movie title (e.g. Iron Man)" />
+      <select id="k-select">
+        <option value="3">3</option>
+        <option value="6" selected>6</option>
+        <option value="10">10</option>
+        <option value="16">16</option>
+      </select>
+      <button id="search-btn">Recommend</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1 id="hero-title">Popular Picks</h1>
+        <p>Find movies similar to your taste. Type a movie and click Recommend.</p>
+      </div>
+      <div id="hero-poster" class="hero-poster">
+        <!-- poster shown here -->
+      </div>
+    </section>
+
+    <section id="rows">
+      <!-- dynamic recommendation rows inserted here -->
+    </section>
+
+    <footer class="footer">
+      <small>StreamPick — Item-based KNN Recommender Demo</small>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
